@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Kikincomponente } from './componente';
+import TeachersTable from './componente/tabla';
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
         </a>
 
         <Kikincomponente/>
+        <div>
+          <h1>Lista de Mestros</h1>
+        </div>
       </header>
     </div>
   );
