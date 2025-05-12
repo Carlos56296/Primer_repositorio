@@ -5,6 +5,7 @@ export const Kikincomponente = () => {
     <div>
         <h1>
         Kikincomponente
+        kikin
         </h1>
     </div>
   )
