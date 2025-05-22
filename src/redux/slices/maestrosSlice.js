@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { listarMaestros } from "../axios/maestrosActions";
+import { agregarMaestros, listarMaestros } from "../axios/maestrosActions";
 
 const initialState = {
     usuarios: [],
@@ -26,7 +26,9 @@ const listarMaestrosSlice = createSlice({
                 state.loading = false;
                 state.error = action.error;
             })
-            ;
+            .addCase(agregarMaestros.fulfilled, (state, action) => {
+                state.usuarios.push(action.payload);
+            });
     },
 });
 

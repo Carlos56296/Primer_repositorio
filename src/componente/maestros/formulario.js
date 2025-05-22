@@ -25,6 +25,13 @@ function Formulario() {
 
     return (
         <Container>
+            <Form.Label>ID</Form.Label>
+            <Form.Control
+                type="text"
+                id="ID"
+                onChange={handleEditarValores}
+            />
+
             <Form.Label>Nombre</Form.Label>
             <Form.Control
                 type="text"
@@ -32,24 +39,17 @@ function Formulario() {
                 onChange={handleEditarValores}
             />
 
-            <Form.Label>Apellido</Form.Label>
+            <Form.Label>Materia</Form.Label>
             <Form.Control
                 type="text"
-                id="apellido"
+                id="materia"
                 onChange={handleEditarValores}
             />
 
-            <Form.Label>Apodo</Form.Label>
+            <Form.Label>Experiencia</Form.Label>
             <Form.Control
                 type="text"
-                id="apodo"
-                onChange={handleEditarValores}
-            />
-
-            <Form.Label>Teléfono</Form.Label>
-            <Form.Control
-                type="text"
-                id="telefono"
+                id="experiencia"
                 onChange={handleEditarValores}
             />
 

@@ -13,13 +13,13 @@ export const listarMaestros = createAsyncThunk("componente/listarMaestros",
   }
 );
 
-export const agregarMaestros = createAsyncThunk("componente/agregarMaestros",
+export const agregarMaestros = createAsyncThunk("maestros/agregarMaestros",
   async (nuevoMaestro, { rejectWithValue }) => {
     try {
-      const response = await axios.post("URL", nuevoMaestro);
-      return response.data;
+      const response = await axios.get("URL");
+      return response.data; // Simula que la API devuelve el mismo objeto
     } catch (error) {
-      return rejectWithValue(error);
+      return rejectWithValue(error.message);
     }
   }
 );
